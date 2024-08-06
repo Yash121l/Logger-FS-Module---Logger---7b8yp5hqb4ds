@@ -12,7 +12,7 @@ const fs = require('fs');
 
 function logInfo(message) {
   const content = new Date().toISOString() + " | " + "INFO" + " | " + message
-  fs.writeFile('./logger.txt', content, err => {
+  fs.writeFile('./logs/app.log', content, err => {
     if (err) {
     } else {
     }
@@ -21,7 +21,7 @@ function logInfo(message) {
 
 function logWarning(message) {
   const content = new Date().toISOString() + " | " + "WARN" + " | " + message
-  fs.writeFile('./logger.txt', content, err => {
+  fs.writeFile('./logs/app.log', content, err => {
     if (err) {
     } else {
     }
@@ -32,7 +32,7 @@ function logWarning(message) {
 
 function logError(message) {
   const content = new Date().toISOString() + " | " + "ERROR" + " | " + message
-  fs.writeFile('./logger.txt', content, err => {
+  fs.writeFile('./logs/app.log', content, err => {
     if (err) {
     } else {
     }

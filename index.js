@@ -15,7 +15,7 @@ function logInfo(message) {
 }
 
 function logWarning(message) {
-  fs.appendFileSync( './logs/app.log' , new Date().toISOString() + " | " + "WARN" + " | " + message +"\n")
+  fs.appendFileSync( './logs/app.log' , new Date().toISOString() + " | " + "WARNING" + " | " + message +"\n")
 }
 
 function logError(message) {

@@ -1,13 +1,42 @@
-function logInfo(message) {
+const fs = require('fs');
 
+// const content = 'Some content!';
+// fs.writeFile('./logger.txt', content, err => {
+//   if (err) {
+//     console.error(err);
+//   } else {
+//     console.log('File written successfully!');
+//   }
+// });
+
+
+function logInfo(message) {
+  const content = new Date().toISOString() + " | " + "INFO" + " | " + message
+  fs.writeFile('./logger.txt', content, err => {
+    if (err) {
+    } else {
+    }
+  })
 }
 
 function logWarning(message) {
-
+  const content = new Date().toISOString() + " | " + "WARN" + " | " + message
+  fs.writeFile('./logger.txt', content, err => {
+    if (err) {
+    } else {
+    }
+  })
 }
 
-function logError(message) {
 
+
+function logError(message) {
+  const content = new Date().toISOString() + " | " + "ERROR" + " | " + message
+  fs.writeFile('./logger.txt', content, err => {
+    if (err) {
+    } else {
+    }
+  })
 }
 
 logInfo("This is an info message");
